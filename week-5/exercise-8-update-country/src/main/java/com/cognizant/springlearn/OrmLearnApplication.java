@@ -9,3 +9,10 @@ private static void updateCountryTest() {
 
     LOGGER.info("End");
 }
+public static void main(String[] args) {
+    context = SpringApplication.run(OrmLearnApplication.class, args);
+    countryService = context.getBean(CountryService.class);
+
+    // Call update method test
+    updateCountryTest();
+}
