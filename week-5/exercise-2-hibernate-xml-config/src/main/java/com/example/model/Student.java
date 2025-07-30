@@ -1,13 +1,25 @@
-<!DOCTYPE hibernate-mapping PUBLIC
-        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+package com.example.model;
 
-<hibernate-mapping>
-    <class name="com.example.model.Student" table="students">
-        <id name="id" column="id">
-            <generator class="native"/>
-        </id>
-        <property name="name" column="name"/>
-        <property name="email" column="email"/>
-    </class>
-</hibernate-mapping>
+public class Student {
+    private int id;
+    private String name;
+    private String email;
+
+    public Student() {}
+
+    public Student(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
+
+    // Getters and setters
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+}
+
